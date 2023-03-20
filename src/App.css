@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(
+        270.12deg,
+        #061f52 2.49%,
+        #00757b 75.36%,
+        rgba(44, 174, 151, 0) 197.72%
+    );
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.title {
+    color: #0bc9c3;
+    font-size: 2.5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+    padding: 10px;
+    width: 300px;
+    background-color: #ccebfe;
+    border: #ccebfe;
+}
+.robot-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-container {
+    margin-bottom: 2rem;
+}
+.robot-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+.card {
+    width: 230px;
+    height: 300px;
+    background-color: #9eebcf;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card:hover {
+    background-color: #ffa126;
+    scale: 1.07;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card-img {
+}
+.card-img img {
+    width: 200px;
+    height: 160px;
+}
+.description {
+    text-align: center;
+    margin-top: 20px;
+}
+.description p {
+    font-size: 14px;
+    font-weight: 100;
 }
