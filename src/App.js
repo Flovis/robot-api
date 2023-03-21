@@ -1,4 +1,4 @@
-import "./App.css";
+import "./style/app.css";
 import Robots from "./components/Robots";
 
 function App() {

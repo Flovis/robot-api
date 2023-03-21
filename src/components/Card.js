@@ -4,8 +4,7 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+import "../style/app.css";
 
 const Card = ({ robot }) => {
     const ROBOT = {
@@ -53,25 +52,33 @@ const Card = ({ robot }) => {
                 open={open}
                 onClose={handleClose}
             >
-                <DialogTitle>{ROBOT.name}</DialogTitle>
-                <DialogContent>
-                    <DialogContentText>{ROBOT.email}</DialogContentText>
-                    <Box
-                        noValidate
-                        component="form"
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            m: "auto",
-                            width: "fit-content",
-                        }}
-                    >
-                        <img src={ROBOT.url} alt="robot" />
-                    </Box>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose}>Close</Button>
-                </DialogActions>
+                <div className="modal">
+                    <div className="content">
+                        <div className="content-img">
+                            <DialogContent className="cardo">
+                                <Box>
+                                    <img
+                                        src={ROBOT.url}
+                                        alt="robot"
+                                        className="robot-img"
+                                    />
+                                </Box>
+                            </DialogContent>
+                        </div>
+                        <div className="content-info">
+                            <p>{ROBOT.name}</p>
+                            <p>{ROBOT.email}</p>
+                            <p>{ROBOT.phone}</p>
+                            <p>{ROBOT.address}</p>
+                        </div>
+                    </div>
+
+                    <DialogActions>
+                        <Button onClick={handleClose} className="close-btn">
+                            Close
+                        </Button>
+                    </DialogActions>
+                </div>
             </Dialog>
         </>
     );

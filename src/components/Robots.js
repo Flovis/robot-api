@@ -18,9 +18,12 @@ const Robots = () => {
         setSearch(event.target.value);
     }, []);
 
-    const searchedData = data.filter((a) => {
-        return a.name.toLowerCase().includes(search.toLowerCase());
-    });
+    const searchedData =
+        search.length >= 3
+            ? data.filter((a) => {
+                  return a.name.toLowerCase().includes(search.toLowerCase());
+              })
+            : data;
 
     return (
         <div>
