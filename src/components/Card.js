@@ -14,7 +14,6 @@ const Card = ({ robot }) => {
         phone: robot.phone,
         address: robot.address.street,
     };
-
     const [open, setOpen] = useState(false);
     const [fullWidth, setFullWidth] = useState(true);
     const [maxWidth, setMaxWidth] = useState("sm");
@@ -66,7 +65,7 @@ const Card = ({ robot }) => {
                             </DialogContent>
                         </div>
                         <div className="content-info">
-                            <p>{ROBOT.name}</p>
+                            <h3>{ROBOT.name}</h3>
                             <p>{ROBOT.email}</p>
                             <p>{ROBOT.phone}</p>
                             <p>{ROBOT.address}</p>
