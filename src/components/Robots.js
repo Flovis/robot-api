@@ -54,7 +54,7 @@ const Robots = () => {
                 <div className="robot-list">
                     {searchedData.map((robot, index) => {
                         return <Card key={index} robot={robot} />;
-                    })}
+                    })} 
                 </div>
             </div>
         </div>
